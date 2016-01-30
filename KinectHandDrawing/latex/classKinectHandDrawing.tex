@@ -1,0 +1,102 @@
+\hypertarget{classKinectHandDrawing}{
+\section{\-Kinect\-Hand\-Drawing \-Class \-Reference}
+\label{classKinectHandDrawing}\index{\-Kinect\-Hand\-Drawing@{\-Kinect\-Hand\-Drawing}}
+}
+\-Inheritance diagram for \-Kinect\-Hand\-Drawing\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classKinectHandDrawing}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classKinectHandDrawing_a69d3e7204e09178744b010351a4bbcc4}{\-Mode} \{ {\bfseries \-D\-R\-A\-W\-I\-N\-G}, 
+{\bfseries \-M\-E\-N\-U}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classKinectHandDrawing_a69504c70ec66e9aa7365c502dbc74b02}{\-Kinect\-Hand\-Drawing} ()
+\item 
+virtual \hyperlink{classKinectHandDrawing_a396630a27a66c9b19e746ebd6377ddd2}{$\sim$\-Kinect\-Hand\-Drawing} ()
+\item 
+void \hyperlink{classKinectHandDrawing_ae6aaaacae1904f8d12af96c1702b9912}{depth\-Func} (uint16\-\_\-t $\ast$depth)
+\item 
+void \hyperlink{classKinectHandDrawing_af6f143e88378b3706c52928dc18ae52f}{rgb\-Func} (uint8\-\_\-t $\ast$rgb)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Member \-Enumeration \-Documentation}
+\hypertarget{classKinectHandDrawing_a69d3e7204e09178744b010351a4bbcc4}{
+\index{\-Kinect\-Hand\-Drawing@{\-Kinect\-Hand\-Drawing}!\-Mode@{\-Mode}}
+\index{\-Mode@{\-Mode}!KinectHandDrawing@{\-Kinect\-Hand\-Drawing}}
+\subsubsection[{\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \-Kinect\-Hand\-Drawing\-::\-Mode}}}
+\label{classKinectHandDrawing_a69d3e7204e09178744b010351a4bbcc4}
+\-Contient les modes de l'application\-: \-Mode dessin et mode menu 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classKinectHandDrawing_a69504c70ec66e9aa7365c502dbc74b02}{
+\index{\-Kinect\-Hand\-Drawing@{\-Kinect\-Hand\-Drawing}!\-Kinect\-Hand\-Drawing@{\-Kinect\-Hand\-Drawing}}
+\index{\-Kinect\-Hand\-Drawing@{\-Kinect\-Hand\-Drawing}!KinectHandDrawing@{\-Kinect\-Hand\-Drawing}}
+\subsubsection[{\-Kinect\-Hand\-Drawing}]{\setlength{\rightskip}{0pt plus 5cm}\-Kinect\-Hand\-Drawing\-::\-Kinect\-Hand\-Drawing (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classKinectHandDrawing_a69504c70ec66e9aa7365c502dbc74b02}
+\-Constructeur de l'application \-On y créer la fenetre a l'aide de sfml puis on lance la boucle principale et la capture du kinect \-Definition des \-Bouttons
+
+\-Dessin du menu\hypertarget{classKinectHandDrawing_a396630a27a66c9b19e746ebd6377ddd2}{
+\index{\-Kinect\-Hand\-Drawing@{\-Kinect\-Hand\-Drawing}!$\sim$\-Kinect\-Hand\-Drawing@{$\sim$\-Kinect\-Hand\-Drawing}}
+\index{$\sim$\-Kinect\-Hand\-Drawing@{$\sim$\-Kinect\-Hand\-Drawing}!KinectHandDrawing@{\-Kinect\-Hand\-Drawing}}
+\subsubsection[{$\sim$\-Kinect\-Hand\-Drawing}]{\setlength{\rightskip}{0pt plus 5cm}\-Kinect\-Hand\-Drawing\-::$\sim$\-Kinect\-Hand\-Drawing (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classKinectHandDrawing_a396630a27a66c9b19e746ebd6377ddd2}
+\-Destructeur on y ferme le kinect 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classKinectHandDrawing_ae6aaaacae1904f8d12af96c1702b9912}{
+\index{\-Kinect\-Hand\-Drawing@{\-Kinect\-Hand\-Drawing}!depth\-Func@{depth\-Func}}
+\index{depth\-Func@{depth\-Func}!KinectHandDrawing@{\-Kinect\-Hand\-Drawing}}
+\subsubsection[{depth\-Func}]{\setlength{\rightskip}{0pt plus 5cm}void \-Kinect\-Hand\-Drawing\-::depth\-Func (
+\begin{DoxyParamCaption}
+\item[{uint16\-\_\-t $\ast$}]{depth}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classKinectHandDrawing_ae6aaaacae1904f8d12af96c1702b9912}
+\-Fonctione de traitement des donnée de profondeur elle prend en parametre un tableau d'entier codé sur 16 bit de taille 640$\ast$480 \-Chaque case contient une valeur qui corespond a la profoondeur par rapport au capteur du kinect \-Dessine la silouette dans la texture
+
+\-Paint dans la texture
+
+\-Position de la main aproximative pour le menu
+
+\-Gere les different etat de l'application; \-Dessin, menu
+
+\-Appui sur les bouttons en mode menu
+
+\-Reimplemented from \hyperlink{classDataHandler_a4e70a589e51428a82ea1ce991d8d8967}{\-Data\-Handler}.
+
+\hypertarget{classKinectHandDrawing_af6f143e88378b3706c52928dc18ae52f}{
+\index{\-Kinect\-Hand\-Drawing@{\-Kinect\-Hand\-Drawing}!rgb\-Func@{rgb\-Func}}
+\index{rgb\-Func@{rgb\-Func}!KinectHandDrawing@{\-Kinect\-Hand\-Drawing}}
+\subsubsection[{rgb\-Func}]{\setlength{\rightskip}{0pt plus 5cm}void \-Kinect\-Hand\-Drawing\-::rgb\-Func (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t $\ast$}]{rgb}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classKinectHandDrawing_af6f143e88378b3706c52928dc18ae52f}
+\-Fonction de traitement des couleur elle prend en parametre un tableau d'entier codé sur 8 bit qui corespond a une composante de couleur il a donc une taille de 3$\ast$640$\ast$480 
+
+\-Reimplemented from \hyperlink{classDataHandler_ac0905747d6729d67d838aba050d14e81}{\-Data\-Handler}.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Kinect\-Hand\-Drawing.\-h\item 
+\-Kinect\-Hand\-Drawing.\-cpp\end{DoxyCompactItemize}

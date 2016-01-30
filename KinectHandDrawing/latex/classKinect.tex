@@ -1,0 +1,140 @@
+\hypertarget{classKinect}{
+\section{\-Kinect \-Class \-Reference}
+\label{classKinect}\index{\-Kinect@{\-Kinect}}
+}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classKinect_aef8cce7b210ad901a0c770f6def4b73d}{close} ()
+\item 
+void \hyperlink{classKinect_aceca210ffb72d2783cfe031f1c1919f4}{start\-Capture} ()
+\item 
+void \hyperlink{classKinect_a9eca40fe2513bdc89834ef445c27b47a}{stop\-Capture} ()
+\item 
+void \hyperlink{classKinect_ae51fd7b86da317a46134a77b9792e126}{capture\-Thread} ()
+\item 
+void \hyperlink{classKinect_aa666e042b2a47ec6ff6254bcd417ce55}{set\-Data\-Handler} (\hyperlink{classDataHandler}{\-Data\-Handler} $\ast$handler)
+\item 
+\hyperlink{classDataHandler}{\-Data\-Handler} $\ast$ \hyperlink{classKinect_aef6f34915c7e7518780d984e7d54365a}{get\-Data\-Handler} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classKinect}{\-Kinect} $\ast$ \hyperlink{classKinect_a49065398a7b8cf228a8dff6f0ab4e9c1}{open} ()
+\item 
+static void \hyperlink{classKinect_ae3b40dfb52ec7624e1e8df2e34b45e2f}{depth\-Func} (freenect\-\_\-device $\ast$dev, void $\ast$depth\-Buffer, uint32\-\_\-t timestamp)
+\item 
+static void \hyperlink{classKinect_a919ba42b0f9bb3bdede809441ecc3fd5}{rgb\-Func} (freenect\-\_\-device $\ast$dev, void $\ast$rgb, uint32\-\_\-t timestamp)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classKinect_ae51fd7b86da317a46134a77b9792e126}{
+\index{\-Kinect@{\-Kinect}!capture\-Thread@{capture\-Thread}}
+\index{capture\-Thread@{capture\-Thread}!Kinect@{\-Kinect}}
+\subsubsection[{capture\-Thread}]{\setlength{\rightskip}{0pt plus 5cm}void \-Kinect\-::capture\-Thread (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classKinect_ae51fd7b86da317a46134a77b9792e126}
+\-Thread de capture des données \hypertarget{classKinect_aef8cce7b210ad901a0c770f6def4b73d}{
+\index{\-Kinect@{\-Kinect}!close@{close}}
+\index{close@{close}!Kinect@{\-Kinect}}
+\subsubsection[{close}]{\setlength{\rightskip}{0pt plus 5cm}void \-Kinect\-::close (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classKinect_aef8cce7b210ad901a0c770f6def4b73d}
+\-Détrui linstance du singleton et ferme le kinect \hypertarget{classKinect_ae3b40dfb52ec7624e1e8df2e34b45e2f}{
+\index{\-Kinect@{\-Kinect}!depth\-Func@{depth\-Func}}
+\index{depth\-Func@{depth\-Func}!Kinect@{\-Kinect}}
+\subsubsection[{depth\-Func}]{\setlength{\rightskip}{0pt plus 5cm}void \-Kinect\-::depth\-Func (
+\begin{DoxyParamCaption}
+\item[{freenect\-\_\-device $\ast$}]{dev, }
+\item[{void $\ast$}]{depth\-Buffer, }
+\item[{uint32\-\_\-t}]{timestamp}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classKinect_ae3b40dfb52ec7624e1e8df2e34b45e2f}
+\-Les deux méthodes suivantes sont statiques car freenect a besoin de pointeur de fonction pour traiter les donnée rgb et de profondeur. traitement des données de profondeur execute la méthode de traitement de l'interface datahandler 
+\begin{DoxyParams}{\-Parameters}
+{\em freenect\-\_\-devices$\ast$} & dev kinect en cours d'utilisation \\
+\hline
+{\em void$\ast$} & depth\-Buffer tableau par lequel arrive les données pour etre traités \\
+\hline
+{\em uint32\-\_\-t} & timestamp temps entre deux frames \\
+\hline
+\end{DoxyParams}
+\hypertarget{classKinect_aef6f34915c7e7518780d984e7d54365a}{
+\index{\-Kinect@{\-Kinect}!get\-Data\-Handler@{get\-Data\-Handler}}
+\index{get\-Data\-Handler@{get\-Data\-Handler}!Kinect@{\-Kinect}}
+\subsubsection[{get\-Data\-Handler}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Data\-Handler} $\ast$ \-Kinect\-::get\-Data\-Handler (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classKinect_aef6f34915c7e7518780d984e7d54365a}
+\-Recupere le pointeur du datahandler \hypertarget{classKinect_a49065398a7b8cf228a8dff6f0ab4e9c1}{
+\index{\-Kinect@{\-Kinect}!open@{open}}
+\index{open@{open}!Kinect@{\-Kinect}}
+\subsubsection[{open}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Kinect} $\ast$ \-Kinect\-::open (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classKinect_a49065398a7b8cf228a8dff6f0ab4e9c1}
+\-Recupéreration de l'instance \hypertarget{classKinect_a919ba42b0f9bb3bdede809441ecc3fd5}{
+\index{\-Kinect@{\-Kinect}!rgb\-Func@{rgb\-Func}}
+\index{rgb\-Func@{rgb\-Func}!Kinect@{\-Kinect}}
+\subsubsection[{rgb\-Func}]{\setlength{\rightskip}{0pt plus 5cm}void \-Kinect\-::rgb\-Func (
+\begin{DoxyParamCaption}
+\item[{freenect\-\_\-device $\ast$}]{dev, }
+\item[{void $\ast$}]{rgb, }
+\item[{uint32\-\_\-t}]{timestamp}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classKinect_a919ba42b0f9bb3bdede809441ecc3fd5}
+traitement des données rgb traitement des données de profondeur execute la méthode de traitement de l'interface datahandler 
+\begin{DoxyParams}{\-Parameters}
+{\em freenect\-\_\-devices$\ast$} & dev kinect en cours d'utilisation \\
+\hline
+{\em void$\ast$} & rgb tableau par lequel arrive les données de couleur (un entier par composante de coueleur) exemple \-: si l'image capturé est en 640$\ast$480, la taille du tableau est de 640$\ast$480$\ast$3 \\
+\hline
+{\em uint32\-\_\-t} & timestamp temps entre deux frames \\
+\hline
+\end{DoxyParams}
+\hypertarget{classKinect_aa666e042b2a47ec6ff6254bcd417ce55}{
+\index{\-Kinect@{\-Kinect}!set\-Data\-Handler@{set\-Data\-Handler}}
+\index{set\-Data\-Handler@{set\-Data\-Handler}!Kinect@{\-Kinect}}
+\subsubsection[{set\-Data\-Handler}]{\setlength{\rightskip}{0pt plus 5cm}void \-Kinect\-::set\-Data\-Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Data\-Handler} $\ast$}]{handler}
+\end{DoxyParamCaption}
+)}}
+\label{classKinect_aa666e042b2a47ec6ff6254bcd417ce55}
+\-Definie le pointeur vers le datahandler pour pouvoir en utiliser les methodes rgbfunc et depthfunc \hypertarget{classKinect_aceca210ffb72d2783cfe031f1c1919f4}{
+\index{\-Kinect@{\-Kinect}!start\-Capture@{start\-Capture}}
+\index{start\-Capture@{start\-Capture}!Kinect@{\-Kinect}}
+\subsubsection[{start\-Capture}]{\setlength{\rightskip}{0pt plus 5cm}void \-Kinect\-::start\-Capture (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classKinect_aceca210ffb72d2783cfe031f1c1919f4}
+\-On lance la capture video dans un nouveau thread \hypertarget{classKinect_a9eca40fe2513bdc89834ef445c27b47a}{
+\index{\-Kinect@{\-Kinect}!stop\-Capture@{stop\-Capture}}
+\index{stop\-Capture@{stop\-Capture}!Kinect@{\-Kinect}}
+\subsubsection[{stop\-Capture}]{\setlength{\rightskip}{0pt plus 5cm}void \-Kinect\-::stop\-Capture (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classKinect_a9eca40fe2513bdc89834ef445c27b47a}
+\-On stop la capture et le thread 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Kinect.\-h\item 
+\-Kinect.\-cpp\end{DoxyCompactItemize}
